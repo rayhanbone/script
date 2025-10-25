@@ -5,7 +5,7 @@
 	#address-cells = <0x02>;
 	#size-cells = <0x02>;
 	compatible = "hg680,fj\0amlogic,g12a";
-	model = "Amlogic B860H V5";
+	model = "Amlogic HG680-FJ";
  
 	aliases {
 		mmc0 = "/soc/mmc@ffe03000";
