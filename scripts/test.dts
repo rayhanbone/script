@@ -1775,7 +1775,7 @@
 
 		led_red_kiri {
 			label = "led_red_kiri";
-			gpios = <&gpio_C 48 GPIO_ACTIVE_LOW>; 
+			gpios = <&gpio_C 48 GPIO_ACTIVE_LOW>;
 			default-state = "off";
 			linux,default-trigger = "none";
 		};
