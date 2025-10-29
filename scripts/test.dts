@@ -1773,13 +1773,8 @@
 	leds {
 		compatible = "gpio-leds";
 
-		// ===================================
-		// LED Indikator Kiri (Contoh Power/Status)
-		// ===================================
-
 		led_red_kiri {
 			label = "led_red_kiri";
-			// Pin Absolut: 548. Offset (548 - 500) = 48
 			gpios = <&gpio_C 48 GPIO_ACTIVE_LOW>; 
 			default-state = "off";
 			linux,default-trigger = "none";
@@ -1787,56 +1782,42 @@
 
 		led_green_kiri {
 			label = "led_green_kiri";
-			// Pin Absolut: 547. Offset (547 - 500) = 47
 			gpios = <&gpio_C 47 GPIO_ACTIVE_LOW>;
 			default-state = "off";
-			linux,default-trigger = "heartbeat"; // Pemicu: Berkedip saat sistem hidup
+			linux,default-trigger = "heartbeat";
 		};
-
-		// ===================================
-		// LED Indikator Tengah dan Kanan
-		// ===================================
 		
 		led_red_tengah {
 			label = "led_red_tengah";
-			// Pin Absolut: 518. Offset (518 - 500) = 18
 			gpios = <&gpio_C 18 GPIO_ACTIVE_LOW>;
 			default-state = "off";
-			linux,default-trigger = "rc-feedback"; // Pemicu: Berkedip saat menerima sinyal remote
+			linux,default-trigger = "rc-feedback";
 		};
 
 		led_red_kanan {
 			label = "led_red_kanan";
-			// Pin Absolut: 517. Offset (517 - 500) = 17
 			gpios = <&gpio_C 17 GPIO_ACTIVE_LOW>;
 			default-state = "off";
 		};
 
 		led_green_kanan {
 			label = "led_green_kanan";
-			// Pin Absolut: 521. Offset (521 - 500) = 21
 			gpios = <&gpio_C 21 GPIO_ACTIVE_LOW>;
 			default-state = "off";
-			linux,default-trigger = "netdev"; // Pemicu: Aktivitas jaringan
+			linux,default-trigger = "netdev";
 		};
-        
-        // ===================================
-        // LED Fungsi Khusus
-        // ===================================
 
 		led_spdif {
 			label = "spdif_indicator";
-			// Pin Absolut: 543. Offset (543 - 500) = 43
 			gpios = <&gpio_C 43 GPIO_ACTIVE_LOW>;
 			default-state = "off";
 		};
         
 		led_usb {
 			label = "usb_indicator";
-			// Pin Absolut: 516. Offset (516 - 500) = 16
 			gpios = <&gpio_C 16 GPIO_ACTIVE_LOW>;
 			default-state = "off";
-			linux,default-trigger = "usbdev"; // Pemicu: Aktivitas USB
+			linux,default-trigger = "usbdev";
 		};
 	};
 	
